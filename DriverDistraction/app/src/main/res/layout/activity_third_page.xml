@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.thirdeye.akhil.driverdistraction.thirdPage"
+    android:background="#b1c4ce">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#31416d"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <RelativeLayout
+        android:id="@+id/tripBackground"
+        android:background="#6877a2"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar2">
+
+        <TextView
+            android:id="@+id/tripset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="Trip 1" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/tripBackground"
+        android:layout_alignParentStart="true"
+        app:srcCompat="@drawable/icontool" />
+
+    <FrameLayout
+        android:layout_width="5dp"
+        android:layout_height="200dp"
+        android:background="#31416d"
+        android:layout_below="@+id/tripBackground"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/vertical">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/vertical"
+        android:background="#31416d"
+        android:id="@+id/frameLayout2">
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/weekday"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/tripBackground"
+        android:layout_marginStart="27dp"
+        android:layout_marginTop="18dp"
+        android:text="getWeekDay"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/weekday"
+        android:layout_below="@+id/weekday"
+        android:text="Date"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/timeSet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/date"
+        android:layout_below="@+id/date"
+        android:text="Time"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/trip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/timeSet"
+        android:layout_below="@+id/timeSet"
+        android:layout_marginTop="29dp"
+        android:text="Trip"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/trip"
+        android:layout_below="@+id/trip"
+        android:text="Distance"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/timeTravelled"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/distance"
+        android:layout_below="@+id/distance"
+        android:text="Time"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/cumuScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/weekday"
+        android:layout_alignBottom="@+id/weekday"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="25dp"
+        android:text="Cumulative Score"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/digit1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/cumuScore"
+        android:layout_below="@+id/cumuScore"
+        android:layout_marginStart="37dp"
+        android:text="digit"
+        android:textColor=" #ef3413 " />
+
+    <TextView
+        android:id="@+id/cuScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cumuScore"
+        android:layout_alignStart="@+id/cumuScore"
+        android:layout_below="@+id/timeSet"
+        android:text="Current Score"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/digit2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/digit1"
+        android:layout_below="@+id/cuScore"
+        android:text="digit"
+        android:textColor=" #ef3413 " />
+
+    <TextView
+        android:id="@+id/avgScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/cuScore"
+        android:layout_alignStart="@+id/cuScore"
+        android:layout_below="@+id/distance"
+        android:text="Average Score"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/digit3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/digit2"
+        android:layout_below="@+id/avgScore"
+        android:text="digit"
+        android:textColor=" #ef3413 " />
+
+    <FrameLayout
+        android:id="@+id/frameLayout3"
+        android:layout_width="5dp"
+        android:layout_height="100dp"
+
+        android:layout_alignEnd="@+id/warning"
+        android:layout_below="@+id/frameLayout2"
+        android:layout_marginEnd="17dp"
+        android:layout_marginTop="25dp"
+        android:background="#31416d">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout4"
+        android:layout_width="5dp"
+        android:layout_height="100dp"
+
+        android:layout_alignTop="@+id/imgddstatus"
+        android:layout_toStartOf="@+id/avgScore"
+        android:background="#31416d">
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frameLayout5"
+        android:layout_width="5dp"
+        android:layout_height="100dp"
+
+        android:layout_alignStart="@+id/vertical"
+        android:layout_below="@+id/frameLayout4"
+        android:layout_marginTop="14dp"
+        android:background="#31416d">
+
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imgkm"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignStart="@+id/timeTravelled"
+        android:layout_alignTop="@+id/frameLayout3"
+        app:srcCompat="@drawable/distance" />
+
+    <TextView
+        android:id="@+id/displayKms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/frameLayout3"
+        android:layout_alignStart="@+id/imgkm"
+        android:layout_toStartOf="@+id/warning"
+        android:gravity="center"
+        android:text="kilo"
+        android:textColor="#31416d" />
+
+    <ImageView
+        android:id="@+id/imgddstatus"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/frameLayout3"
+        android:layout_centerHorizontal="true"
+        app:srcCompat="@drawable/dd" />
+
+    <ImageView
+        android:id="@+id/imgcorner"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignEnd="@+id/avgScore"
+        android:layout_alignTop="@+id/frameLayout4"
+        app:srcCompat="@drawable/cornering" />
+
+    <ImageView
+        android:id="@+id/imgwarn"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignBottom="@+id/frameLayout5"
+        android:layout_marginBottom="13dp"
+        android:layout_toStartOf="@+id/ddstatus"
+        app:srcCompat="@drawable/braking" />
+
+    <ImageView
+        android:id="@+id/imgtotal"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_alignTop="@+id/imgwarn"
+        android:layout_toEndOf="@+id/ddstatus"
+        app:srcCompat="@drawable/total" />
+
+    <TextView
+        android:id="@+id/ddstatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/frameLayout5"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:text="ddstatus"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/corner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ddstatus"
+        android:layout_alignBottom="@+id/ddstatus"
+        android:layout_alignEnd="@+id/imgcorner"
+        android:layout_alignStart="@+id/imgcorner"
+        android:gravity="center"
+        android:text="Corner"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout5"
+        android:layout_toEndOf="@+id/imageView2"
+        android:layout_toStartOf="@+id/imgddstatus"
+        android:gravity="center"
+        android:text="Warn"
+        android:textColor="#31416d" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/frameLayout5"
+        android:layout_toEndOf="@+id/imgddstatus"
+        android:layout_toStartOf="@+id/corner"
+        android:gravity="center"
+        android:text="Total"
+        android:textColor="#31416d" />
+
+</RelativeLayout>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    tools:context="com.thirdeye.akhil.driverdistraction.firstPage"
+    android:background="#b1c4ce">
+
+
+    <com.github.lzyzsd.circleprogress.DonutProgress
+        android:id="@+id/cirProgress"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+       app:donut_unfinished_stroke_width="20dp"
+        app:donut_finished_stroke_width="20dp"
+         android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        app:donut_inner_bottom_text=""
+        app:donut_text_color="#b1c4ce"
+        custom:donut_finished_color="#0099FF"
+        />
+
+    <TextView
+        android:id="@+id/insideText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:foregroundGravity="center"
+        android:textColor="#31416d"
+        android:textSize="24dp"
+        tools:layout_editor_absoluteX="163dp"
+        tools:layout_editor_absoluteY="246dp" />
+
+    <TextView
+        android:id="@+id/head"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cirProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="28dp"
+        android:text="Driving Detected"
+        android:textColor="#31416d"
+        android:textSize="25dp" />
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="#31416d" />
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignBottom="@+id/toolbar"
+        android:layout_alignParentStart="true"
+        android:contentDescription="@android:string/untitled"
+        app:srcCompat="@drawable/icontool" />
+
+    <com.shitij.goyal.slidebutton.SwipeButton
+        android:id="@+id/swipe"
+        android:textColor="#31416d"
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/cirProgress"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="39dp"
+        android:background="#ffffff"
+        android:gravity="center"
+        app:button_swipe_text="Cancelling"
+        app:button_post_confirm_text="Cancelled"
+        app:after_confirmation_background="#ffffff"
+        android:text="I am not Driving"
+        app:gradient_color_2="#6877a2"
+        app:gradient_color_3="#6877a2"
+        app:gradient_color_2_width="5dp"
+        app:swipe_mode="repeat" />
+
+</RelativeLayout>
